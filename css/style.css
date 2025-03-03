@@ -1,0 +1,460 @@
+:root {
+    --color-oscuro1: rgb(28, 109, 82);
+    --color-claro1: aquamarine;
+
+}
+
+* {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--color-oscuro1);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header-container {
+    height: 65px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.header-container a img {
+    margin-top: 10px;
+    margin-left: 55px;
+    width: 140px;
+}
+
+.main-container {
+    display: flex;
+    height: auto;
+    margin-bottom: 35px;
+}
+
+.bono-container {
+    display: flex;
+    width: 50%;
+    height: auto;
+}
+
+.bono-img-container {
+    display: flex;
+    width: 85%;
+    height: auto;
+    margin-left: auto;
+}
+
+.bono-img {
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+    background-color: var(--color-claro1);
+    background-image: url('');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sign-container {
+    display: flex;
+    width: 50%;
+    height: 700px;
+}
+
+.sign-content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+    height: 100%;
+    padding-top: 20px;
+    padding-left: auto;
+}
+
+.steps-container {
+    align-self: center;
+    background-image: url('../assets/claim-formulario.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 0px;
+    padding-bottom: 5.8%;
+    margin-bottom: 2px;
+    margin-top: 15px;
+}
+
+.formtest {
+    display: flex;
+    position: relative;
+    align-self: center;
+    width: 70%;
+    height: 82%;
+    overflow: hidden;
+    transition: transform 1s ease-in-out;
+}
+
+/* Clases para añadir para las animaciones a los formularios */
+.form-container.hide {
+    transform: translateX(-100%);
+}
+
+.form-container2.hide {
+    transform: translateX(-200%);
+}
+
+.form-container2.show {
+    transform: translateX(-100%);
+}
+
+.form-container3.show1 {
+    transform: translateX(-100%);
+}
+
+.form-container3.show2 {
+    transform: translateX(-200%);
+}
+
+
+.form-container, .form-container2, .form-container3 {
+    align-self: center;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    z-index: +10;
+    transition: transform 1s ease-in-out;
+}
+
+h3 {
+    color: var(--color-oscuro1);
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+form {
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 20px;
+}
+
+#nombreNV, #apellido1NV, #apellido2NV, #fecNacNV, #domicilioNV, #dniNok,
+#emailNV, #confirmaNV, #telefonoNV, #postalNV, #regionNV, #paisNV, #usuarioNV,
+#confirmaPassNV, #respuestaNV {
+    opacity: 0;
+    padding: 0px;
+    color: red;
+    font-size: 12px;
+}
+
+#caracNV, #letraNV, #numNV, #espeNV, #persNV {
+    color: black;
+}
+
+.doctype-sex-container, .city-provincia-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+.sex-container, .provincia-container {
+    margin-left: 30px;
+}
+
+.dni-countryfrom-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.countryfrom-container {
+    margin-left: 30px;
+}
+
+.postal-container {
+    margin-top: 10px;
+}
+
+form input {
+    border-radius: 3px;
+    border-color: rgba(0,0,0,0.3);
+}
+
+form input[type="radio"] {
+    margin-top: 5px;
+}
+
+.radio2 {
+    margin-left: 15px;
+}
+
+#mayor18, #recibirOfertas {
+    margin-top: 10px;
+}
+
+.checkbox-container1 {
+    display: flex;
+    margin-top: 5px;
+}
+
+.checkbox-container2 {
+    display: flex;
+    margin-top: 5px;
+}
+
+.checkbox-container1 label, .checkbox-container2 label {
+    margin-left: 10px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+.requisitosMinimos {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.regionFiscal, .pais {
+    margin-top: 25px;
+}
+
+#respuestaSeguridad-label {
+    margin-top: 25px;
+}
+
+.buttons-container {
+    align-self: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttons-container2 {
+    align-self: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+
+.buttons-container3 {
+    align-self: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+#atras1, #atras2 {
+    width: 35%;
+    margin-left: 50px;
+}
+
+#continuar, #finalizar {
+    width: 35%;
+    margin-right: 50px;
+}
+
+form button {
+    align-self: center;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--color-oscuro1);
+    width: 45%;
+    height: 40px;
+    margin-top: 9px;
+}
+
+.footer-container {
+    background-color: var(--color-claro1);
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom: 10.15625%;
+}
+
+#b1 {
+    position: absolute;
+    width: 800px;
+    top: 400px;
+    left: 1250px;
+    z-index: -10;
+}
+
+#b2 {
+    position: absolute;
+    width: 450px;
+    top: 0px;
+    left: 0px;
+    z-index: -10;
+}
+
+#b3 {
+    position: absolute;
+    width: 200px;
+    top: 510px;
+    left: 120px;
+}
+
+#b4 {
+    position: absolute;
+    width: 150px;
+    top: 140px;
+    left: 770px;
+    filter: blur(1px);
+}
+
+#b5 {
+    position: absolute;
+    width: 75px;
+    top: 75px;
+    left: 1700px;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+#b6 {
+    position: absolute;
+    width: 85px;
+    top: 600px;
+    left: 870px;
+    filter: blur(2px);
+}
+
+@media only screen and (max-width: 770px){
+    body {
+        background-image: url('');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .header-container a img {
+        margin-left: 35px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        margin-bottom: unset;
+    }
+
+    .bono-container {
+        width: 100%;
+        height: 400px;
+    }
+
+    .bono-img-container {
+        width: 100%;
+        margin-left: unset;
+    }
+
+    .sign-content {
+        width: 100%;
+        padding-left: unset;
+    }
+
+    .bono-img {
+        height: 84.02%;
+    }
+
+    .sign-container {
+        width: 100%;
+    }
+
+    form {
+        font-size: 13px;
+    }
+
+    #registro {
+        margin-top: 25px;
+    }
+
+    .buttons-container2 {
+        margin-top: 15px;
+    }
+
+    .footer-container {
+        background-image: url('');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        padding-bottom: 77.77778%;
+    }
+    
+    #b1 {
+        position: absolute;
+        width: 700px;
+        top: 335px;
+        left: 1050px;
+        z-index: -10;
+    }
+    
+    #b2 {
+        position: absolute;
+        width: 400px;
+        top: -40px;
+        left: -130px;
+        z-index: -10;
+    }
+    
+    #b3 {
+        position: absolute;
+        width: 150px;
+        top: 350px;
+        left: 20px;
+    }
+    
+    #b4 {
+        position: absolute;
+        width: 119px;
+        top: 60px;
+        left: 530px;
+        filter: blur(1px);
+    }
+    
+    #b5 {
+        position: absolute;
+        width: 75px;
+        top: 75px;
+        left: 1350px;
+        z-index: -1;
+    }
+    
+    #b6 {
+        position: absolute;
+        width: 85px;
+        top: 430px;
+        left: 575px;
+    }
+}

@@ -1,0 +1,133 @@
+{
+    "regionFiscal": {
+      "Andalucía": {
+        "provincias": [
+          "Almería",
+          "Cádiz",
+          "Córdoba",
+          "Granada",
+          "Huelva",
+          "Jaén",
+          "Málaga",
+          "Sevilla"
+        ]
+      },
+      "Aragón": {
+        "provincias": [
+          "Huesca",
+          "Teruel",
+          "Zaragoza"
+        ]
+      },
+      "Asturias": {
+        "provincias": [
+          "Asturias"
+        ]
+      },
+      "Islas Baleares": {
+        "provincias": [
+          "Islas Baleares"
+        ]
+      },
+      "Canarias": {
+        "provincias": [
+          "Las Palmas",
+          "Santa Cruz de Tenerife"
+        ]
+      },
+      "Cantabria": {
+        "provincias": [
+          "Cantabria"
+        ]
+      },
+      "Castilla y León": {
+        "provincias": [
+          "Ávila",
+          "Burgos",
+          "León",
+          "Palencia",
+          "Salamanca",
+          "Segovia",
+          "Soria",
+          "Valladolid",
+          "Zamora"
+        ]
+      },
+      "Castilla-La Mancha": {
+        "provincias": [
+          "Albacete",
+          "Ciudad Real",
+          "Cuenca",
+          "Guadalajara",
+          "Toledo"
+        ]
+      },
+      "Cataluña": {
+        "provincias": [
+          "Barcelona",
+          "Girona",
+          "Lleida",
+          "Tarragona"
+        ]
+      },
+      "Extremadura": {
+        "provincias": [
+          "Badajoz",
+          "Cáceres"
+        ]
+      },
+      "Galicia": {
+        "provincias": [
+          "A Coruña",
+          "Lugo",
+          "Ourense",
+          "Pontevedra"
+        ]
+      },
+      "Madrid": {
+        "provincias": [
+          "Madrid"
+        ]
+      },
+      "Murcia": {
+        "provincias": [
+          "Murcia"
+        ]
+      },
+      "Navarra": {
+        "provincias": [
+          "Navarra"
+        ]
+      },
+      "La Rioja": {
+        "provincias": [
+          "La Rioja"
+        ]
+      },
+      "País Vasco": {
+        "provincias": [
+          "Álava",
+          "Gipuzcoa",
+          "Bizkaia"
+        ]
+      },
+      "Comunidad Valenciana": {
+        "provincias": [
+          "Alicante",
+          "Castellón",
+          "Valencia"
+        ]
+      },
+      "Ceuta": {
+        "provincias": [
+          "Ceuta"
+        ]
+      },
+      "Melilla": {
+        "provincias": [
+          "Melilla"
+        ]
+      }
+    }
+  }
+  

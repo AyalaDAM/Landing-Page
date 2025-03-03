@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header-container">
+        <a href="github.com/AyalaDAM" target="_blank"><img src="assets/logo.png" alt=""></a>
+    </header>
+
+    <main class="main-container">
+        <div class="bono-container">
+            <div class="bono-img-container">
+                <div class="bono-img"></div>
+            </div>
+            </img src="assets/Desktop/claim-desktop.png" alt="Bono de 50€">
+        </div>
+        <div class="sign-container">
+            <div class="sign-content">
+                <div class="steps-container"></div>
+                <div class="formtest">
+                    <div class="form-container">
+                        <h3>Datos Personales</h3>
+                        <form action="" method="post" id="form1">
+                            <input type="hidden" name="formulario" value="formulario1">
+
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                            <p id="nombreNV">Nombre no válido</p>
+    
+                            <label id="apellido1-label" for="apellido1">Primer Apellido</label>
+                            <input type="text" name="apellido1" id="apellido1" placeholder="Primer Apellido" required>
+                            <p id="apellido1NV">Apellido no válido</p>
+    
+                            <label id="apellido2-label" for="apellido2">Segundo Apellido</label>
+                            <input type="text" name="apellido2" id="apellido2" placeholder="Segundo Apellido" required>
+                            <p id="apellido2NV">Apellido no válido</p>
+    
+                            <div class="doctype-sex-container">
+                                <div class="doctype-container">
+                                    <label for="identificacion">Tipo de Documento</label><br>
+                                    <input type="radio" name="identificacion" id="identificacion" value="dni" required> DNI
+                                    <input class="radio2" type="radio" name="identificacion" id="identificacion" value="nie"> NIE
+                                </div>
+                                <div class="sex-container">
+                                    <label for="sexo">Sexo</label><br>
+                                    <input type="radio" name="sexo" id="sexo" value="hombre" required> Hombre
+                                    <input class="radio2" type="radio" name="sexo" id="sexo" value="mujer"> Mujer
+                                </div>
+                            </div>
+
+                            <div class="dni-countryfrom-container">
+                                <div class="dni-container">
+                                    <label id="DniNie" for="dni">DNI</label><br>
+                                    <input type="text" name="dni" id="dni" placeholder="Ej. 01234589A" required>
+                                    <p id="dniNok">DNI ocupado</p>
+                                </div>
+                                <div class="countryfrom-container">
+                                    <label for="nacionalidad">Nacionalidad</label><br>
+                                    <select name="nacionalidad" id="nacionalidad" required>
+                                        <!-- Se rellena con la base de datos -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <label id="fecNac-label" for="fecNac">Fecha de Nacimiento</label>
+                            <input type="date" name="fecNac" id="fecNac" required>
+                            <p id="fecNacNV">Debe tener más de 18 y menos de 80 años</p>
+
+                            <label class="domicilio" for="domicilio">Domicilio</label>
+                            <input type="text" name="domicilio" id="domicilio" placeholder="Calle Ejemplo 3 5A" pattern="^[a-zA-Z0-9\s]*$" required>
+                            <p id="domicilioNV">Caracteres no válidos</p>
+
+                            <button class="form_button" id="registro" type="submit">REGISTRO</button>
+                        </form>
+                    </div>
+
+                    <div class="form-container2">
+                        <h3>Datos de Contacto</h3>
+                        <form action="" method="post" id="form2">
+                            <input type="hidden" name="formulario" value="formulario2" required>
+
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" placeholder="Email" required>
+                            <p id="emailNV">Email no válido</p>
+    
+                            <label for="confirmaEmail">Confirmar email</label>
+                            <input type="text" name="confirmaEmail" id="confirmaEmail" placeholder="Confirmar email" required>
+                            <p id="confirmaNV">Los emails no coinciden</p>
+    
+                            <label for="telefono">Telefono</label>
+                            <input type="text" name="telefono" id="telefono" placeholder="Ej. +34698375401" required>
+                            <p id="telefonoNV">Número de teléfono no válido</p>
+    
+                            <div class="postal-container">
+                                <label for="codPostal">Código postal</label><br>
+                                <input type="text" name="codPostal" id="codPostal" placeholder="Ej. 51002" required>
+                                <p id="postalNV">Código postal no válido</p>
+                            </div>
+    
+                            <div class="city-provincia-container">
+                                <div class="city-container">
+                                    <label for="localidad">Localidad</label><br>
+                                    <input type="text" name="localidad" id="localidad">
+                                </div>
+                                <div class="provincia-container">
+                                    <label for="provincia">Provincia</label><br>
+                                    <select name="provincia" id="provincia" required>
+                                        <!-- Se rellena en base al código postal -->
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <label class="regionFiscal" for="regionFiscal">Región Fiscal</label>
+                            <select name="regionFiscal" id="regionFiscal" required>
+                                <!-- Se rellena con la base de datos -->
+                            </select>
+    
+                            <label class="pais" for="pais">País</label>
+                            <select name="pais" id="pais" required>
+                                <option value="199">España</option>
+                            </select>
+                            <p id="paisNV">País no válido</p>
+
+                            <div class="buttons-container2">
+                                <button class="form_button2" id="atras1">ATRÁS</button>
+                                <button class="form_button2" id="continuar" type="submit">CONTINUAR</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="form-container3">
+                        <h3>Datos de la Cuenta</h3>
+                        <form action="" method="post" id="form3">
+                            <label for="usuario">Usuario</label>
+                            <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+                            <p id="usuarioNV">Nombre de usuario no válido</p>
+    
+                            <label for="password">Contraseña</label>
+                            <input type="text" name="password" id="password" placeholder="Contraseña">
+                            <div class="requisitosMinimos">
+                                <p>Requisitos mínimos:</p>
+                                <ul>
+                                    <li id="caracNV">Entre 8 y 64 caracteres.</li>
+                                    <li id="letraNV">Al menos una letra mayus. o minus.</li>
+                                    <li id="numNV">Al menos un número.</li>
+                                    <li id="espeNV">Al menos un caracter especial.</li>
+                                    <li id="persNV">No debe contener datos personales.</li>
+                                </ul>
+                            </div>
+                            
+                            <label for="confirmaPassword">Confirmar contraseña</label>
+                            <input type="text" name="confirmaPassword" id="confirmaPassword" placeholder="Confirmar contraseña">
+                            <p id="confirmaPassNV">Las contraseñas no coinciden</p>
+    
+                            <label for="preguntaSeguridad">Pregunta de seguridad</label>
+                            <select name="preguntaSeguridad" id="preguntaSeguridad">
+                                <option value="madre">Lugar de nacimiento de tu madre</option>
+                                <option value="padre">Lugar de nacimiento de tu padre</option>
+                                <option value="mascota">Nombre de tu primera mascota</option>
+                                <option value="abuelo">Nombre de tu abuelo</option>
+                                <option value="cancion">Canción preferida</option>
+                                <option value="equipo">Equipo preferido</option>
+                            </select>
+                            
+                            <label id="respuestaSeguridad-label" for="respuestaSeguridad">Respuesta de seguridad</label>
+                            <input type="text" name="respuestaSeguridad" id="respuestaSeguridad" placeholder="Respuesta">
+                            <p id="respuestaNV">La respuesta no debe estar vacía</p>
+    
+                            <div class="checkbox-container1">
+                                <input type="checkbox" name="mayor18" id="mayor18">
+                                <label for="mayor18">Confirmo que soy mayor de 18 años.</label>
+                            </div>
+    
+                            <div class="checkbox-container2">
+                                <input type="checkbox" name="recibirOfertas" id="recibirOfertas" checked>
+                                <label for="recibirOfertas">Quiero recibir ofertas y promociones.</label>
+                            </div>
+    
+                            <div class="buttons-container3">
+                                <button class="form_button2" id="atras2">ATRÁS</button>
+                                <button class="form_button2" id="finalizar" type="submit">FINALIZAR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-container"></footer>
+
+    <img id="b1" src="assets/bola-1.png" alt="Bola1">
+    <img id="b2" src="assets/bola-2.png" alt="Bola2">
+    <img id="b3" src="assets/bola-3.png" alt="Bola3">
+    <img id="b4" src="assets/bola-4.png" alt="Bola4">
+    <img id="b5" src="assets/bola-5.png" alt="Bola5">
+    <img id="b6" src="assets/bola-6.png" alt="Bola6">
+
+    <script src="js/validadoresJSON.js"> // Script para validar los campos </script>
+    <script src="js/cambiarDocumento.js"> // Script para cambiar entre DNI y NIE y activar su área de texto </script>
+    <script src="js/rellenarSelects.js"> // Script para modificar la lista de nacionalidades según DNI o NIE, localidades y provicias según código postal y región fiscal </script>
+    <script src="js/recibirDatosRegistro.js"> // Script para enviar los datos de los formularios al registro, que se validen y realizar las transiciones </script>
+</body>
+</html>
