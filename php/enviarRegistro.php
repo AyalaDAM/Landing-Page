@@ -46,8 +46,18 @@ $usuario = $data['usuario'] ?? '';
 $password = $data['password'] ?? '';
 $preguntaSeguridad = $data['preguntaSeguridad'] ?? '';
 $respuestaSeguridad = $data['respuestaSeguridad'] ?? '';
-$mayor18 = (int) ($data['mayor18'] ?? 0);  // Convierte a entero (0 o 1)
-$recibirOfertas = (int) ($data['recibirOfertas'] ?? 0);  // Convierte a entero (0 o 1)
+
+if ($data['mayor18'] == "mayor18") {
+    $mayor18 = 1;
+} else if ($data['mayor18'] == "") {
+    $mayor18 = 0;
+}
+
+if ($data['recibirOfertas'] == "recibirOfertas") {
+    $recibirOfertas = 1;
+} else if ($data['recibirOfertas'] == "") {
+    $recibirOfertas = 0;
+}
 
 // Prepara la consulta SQL para insertar los datos en la base de datos
 $sql = "INSERT INTO usuarios (

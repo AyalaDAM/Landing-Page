@@ -115,8 +115,8 @@ function obtenerDatosFormulario3() {
         'password' => $_POST['password'] ?? '',
         'preguntaSeguridad' => $_POST['preguntaSeguridad'] ?? '',
         'respuestaSeguridad' => $_POST['respuestaSeguridad'] ?? '',
-        'mayor18' => isset($_POST['mayor18']) && $_POST['mayor18'] === 'mayor18',
-        'recibirOfertas' => isset($_POST['recibirOfertas']) && $_POST['recibirOfertas'] === 'recibirOfertas',
+        'mayor18' => $_POST['mayor18'] ?? '',
+        'recibirOfertas' => $_POST['recibirOfertas'] ?? '',
     ];
 
     return $data;
@@ -234,10 +234,10 @@ $fechaHora = date('Y-m-d H:i:s');
 $ip = $_SERVER['REMOTE_ADDR'];
 
 // Variable para almacenar el id del formulario recibido
-$formulario = $_POST['formulario'] ?? '';
+$formu = $_POST['formu'] ?? '';
 
 // If que ejecuta la obtención, validación, log y envío de respuesta JSON para el formulario 1
-if ($formulario === 'form1') {
+if ($formu === 'form1') {
 
     // Almacena los campos del formulario 1 en un array asociativo
     $form1Data = obtenerDatosFormulario1();
@@ -267,7 +267,7 @@ if ($formulario === 'form1') {
 }
 
 // If que ejecuta la obtención, validación, log y envío de respuesta JSON para el formulario 2
-if ($formulario === 'form2') {
+if ($formu === 'form2') {
 
     // Almacena los campos del formulario 2 en un array asociativo
     $form2Data = obtenerDatosFormulario2();
@@ -297,7 +297,7 @@ if ($formulario === 'form2') {
 }
 
 // If que ejecuta la obtención, validación, log y envío de respuesta JSON para el formulario 2
-if ($formulario === 'form3') {
+if ($formu === 'form3') {
 
     // Almacena los campos del formulario 2 en un array asociativo
     $form3Data = obtenerDatosFormulario3();

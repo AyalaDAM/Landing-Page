@@ -11,27 +11,22 @@ const formulario3 = document.querySelector('#form3');
 // Realiza el envío del formulario correspondiente mediante la función enviarFormulario
 document.querySelector('#registro').addEventListener('click', function(event) {
     event.preventDefault();
-    //enviarFormulario(formulario1);
+    enviarFormulario(formulario1);
     console.log("Enviado 1")
-
-    // Eliminar
-    transicionRegistro();
 })
 
 // Realiza el envío del formulario correspondiente mediante la función enviarFormulario
 document.querySelector('#continuar').addEventListener('click', function(event) {
     event.preventDefault();
-    //enviarFormulario(formulario2);
+    enviarFormulario(formulario2);
     console.log("Enviado 2")
-
-    // Eliminar
-    transicionContinuar();
 })
 
 // Realiza el envío del formulario correspondiente mediante la función enviarFormulario
 document.querySelector('#finalizar').addEventListener('click', function(event) {
+  if (!enviarFormularioCompleto(formulario1,formulario2,formulario3)) {
   event.preventDefault();
-  enviarFormularioCompleto(formulario1,formulario2,formulario3)  // Corregir
+  }
   console.log("Enviado 3")
 })
 
@@ -42,7 +37,7 @@ function enviarFormulario(formulario) {
     const formData = new FormData(formulario);
   
     // Adición del id del formulario para identificarlo en el archivo que recibe varios para sus validaciones
-    formData.append('formulario', formulario.id);
+    formData.append('formu', formulario.id);
 
     // Envío del formulario en formData para recibir una respuesta JSON Success true o false
     fetch('php/recibirDatosRegistro.php', {
@@ -71,38 +66,38 @@ function enviarFormulario(formulario) {
   }
 
   function enviarFormularioCompleto(formulario1, formulario2, formulario3) {
-    // Crear un objeto FormData para cada formulario
+    // Crea un objeto FormData para cada formulario
     const formData1 = new FormData(formulario1);
     const formData2 = new FormData(formulario2);
     const formData3 = new FormData(formulario3);
 
-    // Crear un objeto FormData vacío para combinar todos los datos
+    // Crea un objeto FormData vacío para combinar todos los datos
     const formDataFinal = new FormData();
 
-    // Agregar los datos del primer formulario a formDataFinal
+    // Agrega los datos del primer formulario a formDataFinal
     formData1.forEach((value, key) => {
         formDataFinal.append(key, value);
     });
 
-    // Agregar los datos del segundo formulario a formDataFinal
+    // Agrega los datos del segundo formulario a formDataFinal
     formData2.forEach((value, key) => {
         formDataFinal.append(key, value);
     });
 
-    // Agregar los datos del tercer formulario a formDataFinal
+    // Agrega los datos del tercer formulario a formDataFinal
     formData3.forEach((value, key) => {
         formDataFinal.append(key, value);
     });
 
-    // Añadir un dato adicional para indicar que es el formulario completo
-    formDataFinal.append('formulario', 'form3');
+    // Añade un dato adicional para indicar que es el formulario completo
+    formDataFinal.append('formu', 'form3');
 
-    // Mostrar las keys de formDataFinal
+    // Muestra las keys de formDataFinal
     formDataFinal.forEach((value, key) => {
         console.log(`Key: ${key}, Value: ${value}`);
     });
 
-    // Enviar los datos del formulario al servidor
+    // Envía los datos del formulario al servidor
     fetch('php/recibirDatosRegistro.php', {
         method: 'POST',
         body: formDataFinal,
@@ -111,6 +106,7 @@ function enviarFormulario(formulario) {
     .then(data => {
         if (data.success) {
             console.log('Formulario completo enviado correctamente.');
+            return true;
         } else {
             console.log('Error al enviar formulario completo:', data.message);
             alert("Debes completar todos los datos del formulario");
